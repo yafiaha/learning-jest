@@ -11,7 +11,8 @@ import {
   CardsSkeleton,
 } from '@/app/ui/skeletons';
  
-export default async function Page() {
+export default async function Page({ params }: { params: { id: string } }) {
+  const id = params.id;
   // Remove `const latestInvoices = await fetchLatestInvoices()`
   const {
     numberOfInvoices,
